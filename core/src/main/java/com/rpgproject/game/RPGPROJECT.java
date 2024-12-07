@@ -1,21 +1,20 @@
 package com.rpgproject.game;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.rpgproject.screens.GameScreen;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
-public class RPGPROJECT extends ApplicationAdapter {
-    private SpriteBatch batch;
-    private Texture image;
+public class RPGPROJECT extends Game {
+    public SpriteBatch batch;
+    public Texture image;
 
     @Override
     public void create() {
         batch = new SpriteBatch();
         image = new Texture("libgdx.png");
+        this.setScreen(new GameScreen(this));
     }
 
     @Override
@@ -24,11 +23,5 @@ public class RPGPROJECT extends ApplicationAdapter {
         batch.begin();
         batch.draw(image, 140, 210);
         batch.end();
-    }
-
-    @Override
-    public void dispose() {
-        batch.dispose();
-        image.dispose();
     }
 }
