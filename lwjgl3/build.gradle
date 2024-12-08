@@ -45,7 +45,6 @@ dependencies {
       implementation "io.github.berstanio:gdx-svmhelper-extension-bullet:$graalHelperVersion"
       implementation "io.github.berstanio:gdx-svmhelper-extension-freetype:$graalHelperVersion"
     }
-
 }
 
 def os = System.properties['os.name'].toLowerCase()

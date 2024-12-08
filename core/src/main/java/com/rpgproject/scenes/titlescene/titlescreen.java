@@ -1,9 +1,8 @@
-package com.rpgproject.screens;
+package com.rpgproject.scenes.titlescene;
 
 import com.badlogic.gdx.Screen;
 
-public class GameOverScreen implements Screen {
-
+public class titlescreen implements Screen {
     @Override
     public void show() {
 
